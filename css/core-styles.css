@@ -1,0 +1,49 @@
+*, ::after, ::before {
+	box-sizing: border-box;
+	padding: 0; 
+	margin: 0;
+	border: 0;
+
+}
+
+html {
+	background: var(--white);
+	min-height: 100vh;
+}
+
+body {
+	min-height: 100vh;
+	position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-title);
+	font-style: normal;
+	font-weight: 700;
+	color: var(--gray);
+	line-height: 1.5;
+	letter-spacing: 0;
+}
+
+p {
+	font-family: var(--font-body);
+	font-style: normal;
+	font-weight: 400;
+	color: var(--gray);
+	line-height: 1.25;
+	letter-spacing: 0;
+}
+
+a {
+	font-family: var(--font-body);
+	font-style: italic;
+	font-weight: 400;
+	color: var(--red);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	transition: color ease-in-out 300ms;
+}
+
+a:hover {
+	color: var(--blue);
+}
