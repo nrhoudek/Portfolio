@@ -34,9 +34,18 @@
 </head>
 <body>
 	<header>
+		<nav class="main-nav">
+			<ul>
+				<li>About</li>
+				<li>Experience & Education</li>
+				<li>Projects</li>
+				<li>Resume</li>
+				<li>Socials</li>
+			</ul>
+		</nav>
 		<section class="hero">
 			<h1 class="greeting">Hello!</h1>
-			<p class="sub-greeting">My Name is Nick. I am a Web Developer.</p>
+			<p class="sub-greeting">My Name is Nick. I am a Frontend Web Developer.</p>
 		</section>
 	</header>
 
@@ -58,24 +67,165 @@
 					<div class="tab" data-tab-name="education">Education</div>
 					<div class="tab" data-tab-name="unrelated">Unrelated Work</div>
 				</div>
-
+				<div class="experience" data-experience="related">
+					<div class="content">
+						<h3 class="content-title">Simpleview</h3>
+						<h4 class="content-subtitle">Frontend Web Developer</h4>
+						<div class="content-description-container">
+							<p class="content-desciption">
+								Simpleview uses it's very own proprietary Content Management System (<abbr>CMS</abbr>) to allow clients full customization of the content of their site, after our initial design build has been finished. In my role, I am resposible for working with clients, designers, and my team to build optimized, responsive, and accessiblity-friendly widgets, components, and navigation that work in all major browsers.
+							</p>
+							<p class="content-note">
+								<em>Important:</em> I do <em>NOT</em> own any of these sites or the content of the sites. However, I these are just a few examples of the sites that my team and I have poured endless hours of effort into.
+							</p>
+							<ul class="examples">
+								<li class="example">
+									<a href="https://www.southshorecva.com/" target="_blank">South Shore, Indiana</a>
+								</li>
+								<li class="example">
+									<a href="https://www.valleyforge.org/" target="_blank">Valley Forge, Pennsylvania</a>
+								</li>
+								<li class="example">
+									<a href="https://www.visitmckinney.com/" target="_blank">McKinney, Texas</a>
+								</li>
+								<li class="example">
+									<a href="https://www.meetnky.com/" target="_blank">Northern Kentucky, Kentucky</a>
+								</li>
+								<li class="example">
+									<a href="https://www.visitrowancountync.com/" target="_blank">Rowan County, North Carolina</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="experience" data-experience="education">
+					<div class="content">
+						<h3 class="content-title">Univeristy of Arizona</h3>
+						<h4 class="content-subtitle">Bachelors of Science - 2019</h4>
+						<div class="content-description-container">
+							<p class="content-desciption">
+							I had a dual-major of Criminal Justice and Public Policy and Management. I graduated Summa Cum Laude (4.0GPA out of $.0GPA). 
+							</p>
+						</div>
+						<h3 class="content-title">Pima Community College</h3>
+						<h4 class="content-subtitle">Associates of Science - 2017</h4>
+						<div class="content-description-container">
+							<p class="content-desciption">
+								I was had a concentration in Computer Science, and was a member of Phi Theta Kappa.
+							</p>
+					</div>
+				</div>
+				<div class="experience" data-experience="unrelated-work">
+					<div class="content">
+						<h3 class="content-title">United States Border Patrol</h3>
+						<h4 class="content-subtitle">Border Patrol Agent</h4>
+						<div class="content-description-container">
+							<p class="content-desciption">
+							I was hired as a Border Patrol Agent during the COVID-19 Pandemic. I was ordered to remain at home until I could report to training when it was safe to do so. I left this position during this waiting period to pursure Web Development. 
+							</p>
+						</div>
+						<h3 class="content-title">United States Customs and Border Protection</h3>
+						<h4 class="content-subtitle">Staff Assistant</h4>
+						<div class="content-description-container">
+							<p class="content-desciption">
+								As a Staff Assistant for the United States Customs and Border Protection, I would coordinate, schedule and arrange training and travel for over 1,000 employees within my area of responisibility. I would also research, produce, and prepare documents and presentations for external customers and stakeholders. Finally, I managed and grew a program from three employees to over fifty employees that allowed ex-military members to use their G.I. Benefits during their on-the-job training for supplemental income.
+							</p>
+					</div>
+					<h3 class="content-title">United States Customs and Border Protection</h3>
+						<h4 class="content-subtitle">Student Intern</h4>
+						<div class="content-description-container">
+							<p class="content-desciption">
+								As a Student Intern for the United States Customs and Border Protection, I was responsible for physical and digital file management. I would complete the annual cateloguing and recording of over 1,200 items distributed throughout my area of responsiblity, and upheld strict securty procedures to maintain data confidentiality.
+							</p>
+					</div>
+				</div>
 			</div>
-
 		</section>
 
 		<!-- Projects -->
 		<section class="projects">
 			<h2 class="section-title">Projects</h2>
-
+			<div class="cards-container">
+				<div class="card">
+					<div class="img-cont">
+						<img src="./assets/keeper-screen.png" alt="Front page of Keeper app">
+					</div>
+					<div class="content-section">
+						<h3 class="card-title">
+							Keeper
+						</h3>
+						<p class="card-description">
+							Keeper is a mock up of Google's Keep App. It's a simple note taking app that helps you stay organized.
+						</p>
+						<ul class="tech-stack">
+							<li>HTML5</li>
+							<li>CSS3</li>
+							<li>JS/ES6</li>
+							<li>React</li>
+						</ul>
+						<div class="card-footer">
+							<a href="https://github.com/nrhoudek/Keeper" target="_blank" class="github">Github</a>
+							<a href="https://houdek-keeper.herokuapp.com/" target="_blank" class="website">Website</a>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="img-cont">
+						<img src="./assets/tin-dog-screen.png" alt="Front page of tindog landing page app.">
+					</div>
+					<div class="content-section">
+						<h3 class="card-title">
+							tindog
+						</h3>
+						<p class="card-description">
+							tindog is a satire of the popular dating app tindr. In it's essence it's tindr but for your dog. Everyone should get a chance to find their soulmate, even your dogs. For a small fee, their love is just a click, tap, or walk away.
+						</p>
+						<ul class="tech-stack">
+							<li>HTML5</li>
+							<li>Bootstrap</li>
+							<li>Responsive</li>
+						</ul>
+						<div class="card-footer">
+							<a href="https://github.com/nrhoudek/tindog" target="_blank" class="github">Github</a>
+							<a href="https://nrhoudek.github.io/tindog/" target="_blank" class="website">Website</a>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="img-cont">
+						<img src="./assets/leg-counter-screen.png" alt="Front page of Dota 2 Leg Counter App.">
+					</div>
+					<div class="content-section">
+						<h3 class="card-title">
+							Dota 2 Leg Counter
+						</h3>
+						<p class="card-description">
+							This small app utilizes the Dota API from Valve to the user how many legs a certain hero within the game has. It may seem a little silly, but the idea for this site came during a game-event where you had to win a game as a hero with X amount of legs. Some of the results are actually surprising. Try: <em class="hero">Axe</em>, <em class="hero">Techies</em>, or <em class="hero">Lifestealer</em>
+						</p>
+						<ul class="tech-stack">
+							<li>HTML5</li>
+							<li>CSS3</li>
+							<li>JS/ES6</li>
+							<li>Responsive</li>
+						</ul>
+						<div class="card-footer">
+							<a href="https://github.com/nrhoudek/Dota2-Leg-Counter" target="_blank" class="github">Github</a>
+							<a href="https://nrhoudek.github.io/Dota2-Leg-Counter/" target="_blank" class="website">Website</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
-
 	</main>
+
 	<footer>
-		<div class="socials">
-
-		</div>
+		<ul class="socials">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 		<div class="copyright">
-
+			<p class="date"></p>
 		</div>
 	</footer>
 </body>
