@@ -31,10 +31,17 @@
 
 	<!-- Link JS files, but defer them so that they do not load until content is loaded -->
 	<script src="./js/index.js" defer></script>
+	<script src="./js/nav.js" defer></script>
+	<script src="./js/experience.js" defer></script>
 </head>
+
 <body>
-	<header>
-		<nav class="main-nav">
+	<header id="header" class="header">
+		<button class="hamburger-button">
+			<i class="fa-solid fa-bars closed"></i>
+			<i class="fa-solid fa-x opened"></i>
+		</button>
+		<nav class="main-nav mobile">
 			<ul>
 				<li>About</li>
 				<li>Experience & Education</li>
@@ -43,15 +50,26 @@
 				<li>Socials</li>
 			</ul>
 		</nav>
+
+		<nav class="main-nav desktop">
+			<ul>
+				<li>About</li>
+				<li>Experience & Education</li>
+				<li>Projects</li>
+				<li>Resume</li>
+				<li>Socials</li>
+			</ul>
+		</nav>
+
 		<section class="hero">
 			<h1 class="greeting">Hello!</h1>
 			<p class="sub-greeting">My Name is Nick. I am a Frontend Web Developer.</p>
 		</section>
 	</header>
 
-	<main id="main-content">
+	<main id="main-content" class="main-content">
 		<!-- About Me -->
-		<section>
+		<section id="about-me" class="about-me">
 			<h2 class="section-title">About Me</h2>
 			<p>
 				My Name is Nick Houdek and I am a Web Developer who likes to focus on the frontend side of developement. I currently work for a company called <a href='https://https://www.simpleviewinc.com/' target='_blank'>Simpleview</a> as a Frontend Web Developer, where I collaborate with Destination Marketing Organizations (<abbr>DMOs</abbr>) to create captivating and functional websites with the goal to attract tourism and travel for their cities and government. I have been coding on and off in various languages since 2014, but it wasn't until 2020 when I decided to make it my career. Since then I have I done everything I can to learn, grow, and take pride and  in watching my code become something beautiful and accesible for all audiences. Cheers!
@@ -59,7 +77,7 @@
 		</section>
 
 		<!-- Experience & Education -->
-		<section>
+		<section id="experience-education" class="experience-education">
 			<h2 class="section-title">Experience & Education</h2>
 			<div class="experience-container">
 				<div class="tabs">
@@ -72,7 +90,7 @@
 						<h3 class="content-title">Simpleview</h3>
 						<h4 class="content-subtitle">Frontend Web Developer</h4>
 						<div class="content-description-container">
-							<p class="content-desciption">
+							<p class="content-description">
 								Simpleview uses it's very own proprietary Content Management System (<abbr>CMS</abbr>) to allow clients full customization of the content of their site, after our initial design build has been finished. In my role, I am resposible for working with clients, designers, and my team to build optimized, responsive, and accessiblity-friendly widgets, components, and navigation that work in all major browsers.
 							</p>
 							<p class="content-note">
@@ -103,16 +121,17 @@
 						<h3 class="content-title">Univeristy of Arizona</h3>
 						<h4 class="content-subtitle">Bachelors of Science - 2019</h4>
 						<div class="content-description-container">
-							<p class="content-desciption">
+							<p class="content-description">
 							I had a dual-major of Criminal Justice and Public Policy and Management. I graduated Summa Cum Laude (4.0GPA out of $.0GPA). 
 							</p>
 						</div>
 						<h3 class="content-title">Pima Community College</h3>
 						<h4 class="content-subtitle">Associates of Science - 2017</h4>
 						<div class="content-description-container">
-							<p class="content-desciption">
+							<p class="content-description">
 								I was had a concentration in Computer Science, and was a member of Phi Theta Kappa.
 							</p>
+						</div>
 					</div>
 				</div>
 				<div class="experience" data-experience="unrelated-work">
@@ -120,14 +139,14 @@
 						<h3 class="content-title">United States Border Patrol</h3>
 						<h4 class="content-subtitle">Border Patrol Agent</h4>
 						<div class="content-description-container">
-							<p class="content-desciption">
+							<p class="content-description">
 							I was hired as a Border Patrol Agent during the COVID-19 Pandemic. I was ordered to remain at home until I could report to training when it was safe to do so. I left this position during this waiting period to pursure Web Development. 
 							</p>
 						</div>
 						<h3 class="content-title">United States Customs and Border Protection</h3>
 						<h4 class="content-subtitle">Staff Assistant</h4>
 						<div class="content-description-container">
-							<p class="content-desciption">
+							<p class="content-description">
 								As a Staff Assistant for the United States Customs and Border Protection, I would coordinate, schedule and arrange training and travel for over 1,000 employees within my area of responisibility. I would also research, produce, and prepare documents and presentations for external customers and stakeholders. Finally, I managed and grew a program from three employees to over fifty employees that allowed ex-military members to use their G.I. Benefits during their on-the-job training for supplemental income.
 							</p>
 					</div>
@@ -143,7 +162,7 @@
 		</section>
 
 		<!-- Projects -->
-		<section class="projects">
+		<section id="#projects" class="projects">
 			<h2 class="section-title">Projects</h2>
 			<div class="cards-container">
 				<div class="card">
@@ -164,8 +183,8 @@
 							<li>React</li>
 						</ul>
 						<div class="card-footer">
-							<a href="https://github.com/nrhoudek/Keeper" target="_blank" class="github">Github</a>
-							<a href="https://houdek-keeper.herokuapp.com/" target="_blank" class="website">Website</a>
+							<a href="https://github.com/nrhoudek/Keeper" target="_blank" class="card-link">Github</a>
+							<a href="https://houdek-keeper.herokuapp.com/" target="_blank" class="card-link">Website</a>
 						</div>
 					</div>
 				</div>
@@ -186,8 +205,8 @@
 							<li>Responsive</li>
 						</ul>
 						<div class="card-footer">
-							<a href="https://github.com/nrhoudek/tindog" target="_blank" class="github">Github</a>
-							<a href="https://nrhoudek.github.io/tindog/" target="_blank" class="website">Website</a>
+							<a href="https://github.com/nrhoudek/tindog" target="_blank" class="card-link">Github</a>
+							<a href="https://nrhoudek.github.io/tindog/" target="_blank" class="card-link">Website</a>
 						</div>
 					</div>
 				</div>
@@ -200,7 +219,7 @@
 							Dota 2 Leg Counter
 						</h3>
 						<p class="card-description">
-							This small app utilizes the Dota API from Valve to the user how many legs a certain hero within the game has. It may seem a little silly, but the idea for this site came during a game-event where you had to win a game as a hero with X amount of legs. Some of the results are actually surprising. Try: <em class="hero">Axe</em>, <em class="hero">Techies</em>, or <em class="hero">Lifestealer</em>
+							This small app utilizes the Dota API from Valve to the user how many legs a certain hero within the game has. It may seem a little silly, but the idea for this site came during a game-event where you had to win a game as a hero with X amount of legs. Some of the results are actually surprising. Try: <em class="dota-hero">Axe</em>, <em class="dota-hero">Techies</em>, or <em class="dota-hero">Lifestealer</em>
 						</p>
 						<ul class="tech-stack">
 							<li>HTML5</li>
@@ -209,8 +228,8 @@
 							<li>Responsive</li>
 						</ul>
 						<div class="card-footer">
-							<a href="https://github.com/nrhoudek/Dota2-Leg-Counter" target="_blank" class="github">Github</a>
-							<a href="https://nrhoudek.github.io/Dota2-Leg-Counter/" target="_blank" class="website">Website</a>
+							<a href="https://github.com/nrhoudek/Dota2-Leg-Counter" target="_blank" class="card-link">Github</a>
+							<a href="https://nrhoudek.github.io/Dota2-Leg-Counter/" target="_blank" class="card-link">Website</a>
 						</div>
 					</div>
 				</div>
@@ -218,11 +237,11 @@
 		</section>
 	</main>
 
-	<footer>
+	<footer id="footer" class="footer">
 		<ul class="socials">
-			<li></li>
-			<li></li>
-			<li></li>
+			<li><i class="fa-brands fa-github"></i></li>
+			<li><i class="fa-brands fa-linkedin"></i></li>
+			<li><i class="fa-brands fa-twitter"></i></li>
 		</ul>
 		<div class="copyright">
 			<p class="date"></p>

@@ -4,7 +4,9 @@
 	--font-body: 'Noto Sans', sans-serif; /* Weights: 400, 700 | Styles: Normal Italic */
 
 	/* Colors */
-	--white: #f8f8f8; 
+	--black: #000000;
+	--white: #ffffff;
+	--off-white: #f8f8f8; 
 	--gray: #2c2f33;
 	--red: #c41e3a;
 	--blue: #3fc7e8;
