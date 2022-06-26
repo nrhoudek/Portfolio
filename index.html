@@ -38,22 +38,22 @@
 <body>
 	<header id="header" class="header">
 		<div class="mobile-nav-cont">
-			<button class="hamburger-button">
+			<button class="hamburger-button" tabindex="0">
 				<i class="fa-solid fa-bars closed"></i>
 				<i class="fa-solid fa-x opened"></i>
 			</button>
-			<nav class="main-nav mobile">
+			<nav class="main-nav mobile" aria-hidden="true" tabindex="-1" role="navigation">
 				<ul class="nav-list">
-					<li class="nav-item"><a href="#about-me">About</a></li>
-					<li class="nav-item"><a href="#experience-education">Experience & Education</a></li>
-					<li class="nav-item"><a href="#projects">Projects</a></li>
-					<li class="nav-item"><a href="/resume.pdf" download="Nicholas Houdek - Resume">Resume (Download)</a></li>
-					<li class="nav-item"><a href="#footer">Socials</a></li>
+					<li class="nav-item"><a href="#about-me" tabindex="-1">About</a></li>
+					<li class="nav-item"><a href="#experience-education" tabindex="-1">Experience & Education</a></li>
+					<li class="nav-item"><a href="#projects" tabindex="-1">Projects</a></li>
+					<li class="nav-item"><a href="/resume.pdf" download="Nicholas Houdek - Resume" tabindex="-1">Resume (Download)</a></li>
+					<li class="nav-item"><a href="#footer" tabindex="-1">Socials</a></li>
 				</ul>
 			</nav>
 		</div>
 
-		<nav class="main-nav desktop">
+		<nav class="main-nav desktop" role="navigation">
 			<ul class="nav-list">
 				<li class="nav-item"><a href="#about-me">About</a></li>
 				<li class="nav-item"><a href="#experience-education">Experience & Education</a></li>

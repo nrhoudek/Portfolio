@@ -468,6 +468,10 @@
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
+	.projects .card .content-section {
+		padding: 20px;
+	}
+
 	.projects .card .card-title {
 		font-size: 2rem;
 	}
