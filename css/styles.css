@@ -4,7 +4,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	justify-content: flex-end;
 	pointer-events: none;
@@ -81,22 +81,23 @@
 /**********Hero**********/
 .header .hero {
 	position: relative;
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 	justify-content: center;
-	min-height: 200px;
+	min-height: 300px;
 	background: var(--light-gray);
-	overflow: hidden;
 	padding-bottom: 30px;
+	border-bottom: 1px solid var(--gray);
 	margin-bottom: 20px;
 }
 
-.header .hero::after {
+.header .hero::before {
 	content: '';
 	position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	left: 50%;
+	z-index: 2;
 	transform: translateX(-50%);
 	height: 0;
 	width: 0;
@@ -105,8 +106,30 @@
 	border-bottom: 30px solid var(--white);
 }
 
+.header .hero::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	z-index: 1;
+	transform: translateX(-50%);
+	height: 0;
+	width: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 30px solid var(--gray);
+}
+
+.header .hero .hero-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
 .header .hero .greeting {
-	font-size: 3.75em;
 	padding: 0 var(--mobile-side-padding);
 }
 
@@ -117,6 +140,15 @@
 }
 
 /**********About Me**********/
+@media (min-width: 64em) {
+	.about-me .section-title {
+		margin-bottom: var(--sm-content-gap);
+	}
+
+	.about-me p {
+		font-size: 1.25rem;
+	}
+}
 
 /**********Experience and Education**********/
 .experience-education .experience-container {
@@ -181,7 +213,7 @@
 
 .experience-education .content-subtitle {
 	font-weight: 400;
-	margin-bottom: 10px;
+	margin-bottom: var(--sm-content-gap);
 }
 
 .experience-education .content-description,
@@ -203,6 +235,38 @@
 .experience-education .example i {
 	margin-right: 2px;
 	color: var(--dark-blue);
+}
+
+@media  (min-width: 40em) {
+	.experience-education .tabs {
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 64em) {
+	.experience-education .tabs {
+		margin-bottom: var(--lg-content-gap);
+	}
+
+	.experience-education .tab {
+		font-size: 1.25rem;
+	}
+	
+	.experience-education .content-description,
+	.experience-education .content-note {
+		font-size: 1.25rem;
+		margin-bottom: var(--lg-content-gap);
+	}
+
+	.experience-education .example {
+		font-size: 1.25rem;
+		padding: 8px 0;
+	}
+	
+	.experience-education .example i {
+		font-size: 1.25rem;
+		margin-right: 4px;
+	}
 }
 
 /**********Projects**********/
@@ -285,7 +349,7 @@
 		grid-template-columns: 1fr 1fr;
 		align-items: start;
 	}
-	 /* side-by-side 3rd card */
+	 /* side-by-side 1st card */
 	.projects .card:nth-child(1) {
 		grid-column: 1 / -1;
 		display: grid;
@@ -313,7 +377,25 @@
 	.projects .cards-container {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-	 /* side-by-side 3rd card */
+
+	.projects .card .card-title {
+		font-size: 2rem;
+	}
+	
+	.projects .card .card-description {
+		font-size: 1.25rem;
+		margin-bottom: var(--lg-content-gap);
+	}
+
+	.projects .card .tech-stack .tech {
+		font-size: 1.25rem;
+	}
+
+	.projects .card .card-footer .card-link {
+		font-size: 1.25rem;
+	}
+
+	 /* side-by-side 1st card */
 	.projects .card:nth-child(1) {
 		grid-column: 1;
 		display: block;
@@ -328,6 +410,7 @@
 
 	.projects .card:nth-child(1) .content-section {
 		border-top-right-radius: initial;
+		border-bottom-left-radius: 20px;
 	}
 }
 

@@ -27,7 +27,6 @@ body {
 	padding-bottom: 88px;
 }
 
-header,
 main {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -44,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3.25rem;
+	font-size: 3.75rem;
 }
 
 h2 {
@@ -66,7 +65,7 @@ p {
 	font-style: normal;
 	font-weight: 400;
 	color: var(--dark-gray);
-	line-height: 1.5;
+	line-height: 1.75;
 	letter-spacing: 0;
 }
 
@@ -76,7 +75,7 @@ a {
 	font-weight: 700;
 	color: var(--dark-red);
 	text-decoration: none;
-	transition: color ease-in-out 300ms;
+	transition: color ease-in-out 400ms;
 }
 
 a:hover {
@@ -97,4 +96,38 @@ li {
 main > * {
 	padding: 0 var(--mobile-side-padding);
 	margin-bottom: var(--section-margin);
+}
+
+@media (min-width: 64em) {
+	h1 {
+		font-size: 5rem;
+	}
+	
+	h2 {
+		font-size: 4rem;
+		margin-bottom: var(--lg-content-gap);
+	}
+	
+	h3 {
+		font-size: 3rem;
+	}
+	
+	h4 {
+		font-size: 1.8rem;
+		font-style: italic;
+	}
+	
+	p {
+		font-family: var(--font-body);
+		font-style: normal;
+		font-weight: 400;
+		color: var(--dark-gray);
+		line-height: 1.75;
+		letter-spacing: 0;
+	}
+
+	main > * {
+		padding: 0 var(--desktop-side-padding);
+		margin-bottom: var(--lg-section-margin);
+	}
 }

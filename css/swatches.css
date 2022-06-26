@@ -16,7 +16,10 @@
 
 	/* Spacing */
 	--section-margin: 40px;
+	--lg-section-margin: 50px;
 	--mobile-side-padding: 15px;
+	--desktop-side-padding: 20px;
 	--sm-content-gap: 10px;
 	--md-content-gap: 15px;
+	--lg-content-gap: 25px;
 }
