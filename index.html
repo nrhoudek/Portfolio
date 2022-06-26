@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-	<meta class="keywords" content="Nick Houdek, Houdek, Front-end, front end, web developer, portfolio, personal website, personal site, personal">
+	<meta class="keywords" content="Nick Houdek, Nicholas Houdek, Nick, Nicholas, Houdek, Front-end, frontend, front end, front-end devloper, frontend devloper, front end devloper, frontend engineer, front-end engineer, front end engineer web developer, web engineer, portfolio, personal website, personal site, personal">
 	<meta class="description" content="Portfolio and Personal Website for Nick Houdek">
 	<meta class="author" content="Nick Houdek">
 
@@ -37,19 +37,21 @@
 
 <body>
 	<header id="header" class="header">
-		<button class="hamburger-button">
-			<i class="fa-solid fa-bars closed"></i>
-			<i class="fa-solid fa-x opened"></i>
-		</button>
-		<nav class="main-nav mobile">
-			<ul class="nav-list">
-				<li class="nav-item">About</li>
-				<li class="nav-item">Experience & Education</li>
-				<li class="nav-item">Projects</li>
-				<li class="nav-item">Resume</li>
-				<li class="nav-item">Socials</li>
-			</ul>
-		</nav>
+		<div class="mobile-nav-cont">
+			<button class="hamburger-button">
+				<i class="fa-solid fa-bars closed"></i>
+				<i class="fa-solid fa-x opened"></i>
+			</button>
+			<nav class="main-nav mobile">
+				<ul class="nav-list">
+					<li class="nav-item"><a href="#about-me">About</a></li>
+					<li class="nav-item"><a href="#experience-education">Experience & Education</a></li>
+					<li class="nav-item"><a href="#projects">Projects</a></li>
+					<li class="nav-item"><a href="/resume.pdf" download="Nicholas Houdek - Resume">Resume (Download)</a></li>
+					<li class="nav-item"><a href="#footer">Socials</a></li>
+				</ul>
+			</nav>
+		</div>
 
 		<nav class="main-nav desktop">
 			<ul class="nav-list">
@@ -72,20 +74,20 @@
 		<section id="about-me" class="about-me">
 			<h2 class="section-title">About Me</h2>
 			<p>
-				My Name is Nick Houdek and I am a Web Developer who likes to focus on the frontend side of developement. I currently work for a company called <a href='https://https://www.simpleviewinc.com/' target='_blank'>Simpleview</a> as a Frontend Web Developer, where I collaborate with Destination Marketing Organizations (<abbr>DMOs</abbr>) to create captivating and functional websites with the goal to attract tourism and travel for their cities and government. I have been coding on and off in various languages since 2014, but it wasn't until 2020 when I decided to make it my career. Since then I have I done everything I can to learn, grow, and take pride and  in watching my code become something beautiful and accesible for all audiences. Cheers!
+				My Name is Nick Houdek and I am a Web Developer who likes to focus on the frontend side of developement. I currently work for a company called <a href='https://www.simpleviewinc.com/' target='_blank'>Simpleview</a> as a Frontend Web Developer, where I collaborate with Destination Marketing Organizations (<abbr>DMOs</abbr>) to create captivating and functional websites with the goal to attract tourism and travel for their cities and government. I have been coding on and off in various languages since 2014, but it wasn't until 2020 when I decided to make it my career. Since then I have I done everything I can to learn, grow, and take pride and  in watching my code become something beautiful and accesible for all audiences. Cheers!
 			</p>
 		</section>
 
 		<!-- Experience & Education -->
 		<section id="experience-education" class="experience-education">
 			<h2 class="section-title">Experience & Education</h2>
+			<div class="tabs">
+				<button class="tab active" data-tab-name="related">Related Work</button>
+				<button class="tab" data-tab-name="education">Education</button>
+				<button class="tab" data-tab-name="unrelated">Unrelated Work</button>
+			</div>
 			<div class="experience-container">
-				<div class="tabs">
-					<div class="tab" data-tab-name="related">Related Work</div>
-					<div class="tab" data-tab-name="education">Education</div>
-					<div class="tab" data-tab-name="unrelated">Unrelated Work</div>
-				</div>
-				<div class="experience" data-experience="related">
+				<div class="experience show" data-experience="related">
 					<div class="content">
 						<h3 class="content-title">Simpleview</h3>
 						<h4 class="content-subtitle">Frontend Web Developer</h4>
@@ -94,23 +96,38 @@
 								Simpleview uses it's very own proprietary Content Management System (<abbr>CMS</abbr>) to allow clients full customization of the content of their site, after our initial design build has been finished. In my role, I am resposible for working with clients, designers, and my team to build optimized, responsive, and accessiblity-friendly widgets, components, and navigation that work in all major browsers.
 							</p>
 							<p class="content-note">
-								<em>Important:</em> I do <em>NOT</em> own any of these sites or the content of the sites. However, I these are just a few examples of the sites that my team and I have poured endless hours of effort into.
+								<em class="important">Important:</em> I do <em>NOT</em> own any of these sites or the content of the sites. However, these are just a few examples of the sites that my team and I have poured endless hours of effort into.
 							</p>
 							<ul class="examples">
 								<li class="example">
-									<a href="https://www.southshorecva.com/" target="_blank">South Shore, Indiana</a>
+									<a href="https://www.southshorecva.com/" target="_blank">
+										<i class="fa-solid fa-location-dot"></i>
+										South Shore, Indiana
+									</a>
 								</li>
 								<li class="example">
-									<a href="https://www.valleyforge.org/" target="_blank">Valley Forge, Pennsylvania</a>
+									<a href="https://www.meetnky.com/" target="_blank">
+										<i class="fa-solid fa-location-dot"></i>
+										Northern Kentucky, Kentucky
+									</a>
 								</li>
 								<li class="example">
-									<a href="https://www.visitmckinney.com/" target="_blank">McKinney, Texas</a>
+									<a href="https://www.valleyforge.org/" target="_blank">
+										<i class="fa-solid fa-location-dot"></i>
+										Valley Forge, Pennsylvania
+									</a>
 								</li>
 								<li class="example">
-									<a href="https://www.meetnky.com/" target="_blank">Northern Kentucky, Kentucky</a>
+									<a href="https://www.visitmckinney.com/" target="_blank">
+										<i class="fa-solid fa-location-dot"></i>
+										McKinney, Texas
+									</a>
 								</li>
 								<li class="example">
-									<a href="https://www.visitrowancountync.com/" target="_blank">Rowan County, North Carolina</a>
+									<a href="https://www.visitrowancountync.com/" target="_blank">
+										<i class="fa-solid fa-location-dot"></i>
+										Rowan County, North Carolina
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -122,7 +139,7 @@
 						<h4 class="content-subtitle">Bachelors of Science - 2019</h4>
 						<div class="content-description-container">
 							<p class="content-description">
-							I had a dual-major of Criminal Justice and Public Policy and Management. I graduated Summa Cum Laude (4.0GPA out of $.0GPA). 
+							I had a dual-major of Criminal Justice and Public Policy and Management. I graduated Summa Cum Laude (4.0GPA out of 4.0GPA). 
 							</p>
 						</div>
 						<h3 class="content-title">Pima Community College</h3>
@@ -134,7 +151,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="experience" data-experience="unrelated-work">
+				<div class="experience" data-experience="unrelated">
 					<div class="content">
 						<h3 class="content-title">United States Border Patrol</h3>
 						<h4 class="content-subtitle">Border Patrol Agent</h4>
@@ -149,38 +166,43 @@
 							<p class="content-description">
 								As a Staff Assistant for the United States Customs and Border Protection, I would coordinate, schedule and arrange training and travel for over 1,000 employees within my area of responisibility. I would also research, produce, and prepare documents and presentations for external customers and stakeholders. Finally, I managed and grew a program from three employees to over fifty employees that allowed ex-military members to use their G.I. Benefits during their on-the-job training for supplemental income.
 							</p>
+						</div>
 					</div>
 					<h3 class="content-title">United States Customs and Border Protection</h3>
-						<h4 class="content-subtitle">Student Intern</h4>
-						<div class="content-description-container">
-							<p class="content-desciption">
-								As a Student Intern for the United States Customs and Border Protection, I was responsible for physical and digital file management. I would complete the annual cateloguing and recording of over 1,200 items distributed throughout my area of responsiblity, and upheld strict securty procedures to maintain data confidentiality.
-							</p>
+					<h4 class="content-subtitle">Student Intern</h4>
+					<div class="content-description-container">
+						<p class="content-desciption">
+							As a Student Intern for the United States Customs and Border Protection, I was responsible for physical and digital file management. I would complete the annual cateloguing and recording of over 1,200 items distributed throughout my area of responsiblity, and upheld strict securty procedures to maintain data confidentiality.
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Projects -->
-		<section id="#projects" class="projects">
+		<section id="projects" class="projects">
 			<h2 class="section-title">Projects</h2>
 			<div class="cards-container">
 				<div class="card">
 					<div class="img-cont">
-						<img src="./assets/keeper-screen.png" alt="Front page of Keeper app">
+						<picture>
+							<source media="(min-width: 1024px)" srcset="./assets/keeper-screen-lg.png" width="370" height="185">
+							<source media="(min-width: 640px)" srcset="./assets/keeper-screen-md.png" width="441" height="270">
+							<img src="./assets/keeper-screen-sm.png" alt="Front page of Keeper app showing saved notes with star wars quotes" width="609" height="305">
+						</picture>
 					</div>
 					<div class="content-section">
 						<h3 class="card-title">
 							Keeper
 						</h3>
 						<p class="card-description">
-							Keeper is a mock up of Google's Keep App. It's a simple note taking app that helps you stay organized.
+							Keeper is a mock up of Google's Keep app. Keeper is a note-taking and keeping app that helps the user stay organized. This was my first application built using React. 
 						</p>
 						<ul class="tech-stack">
-							<li>HTML5</li>
-							<li>CSS3</li>
-							<li>JS/ES6</li>
-							<li>React</li>
+							<li class="tech">HTML5</li>
+							<li class="tech">CSS3</li>
+							<li class="tech">JS/ES6</li>
+							<li class="tech">React</li>
 						</ul>
 						<div class="card-footer">
 							<a href="https://github.com/nrhoudek/Keeper" target="_blank" class="card-link">Github</a>
@@ -190,7 +212,11 @@
 				</div>
 				<div class="card">
 					<div class="img-cont">
-						<img src="./assets/tin-dog-screen.png" alt="Front page of tindog landing page app.">
+						<picture>
+							<source media="(min-width: 1024px)" srcset="./assets/tin-dog-screen-lg.png" width="370" height="185">
+							<source media="(min-width: 640px)" srcset="./assets/tin-dog-screen-md.png" width="482" height="241">
+							<img src="./assets/tin-dog-screen-sm.png" alt="Front page of tindog app showing an image of a dog taking a seductive selfie." width="609" height="305">
+						</picture>
 					</div>
 					<div class="content-section">
 						<h3 class="card-title">
@@ -200,9 +226,9 @@
 							tindog is a satire of the popular dating app tindr. In it's essence it's tindr but for your dog. Everyone should get a chance to find their soulmate, even your dogs. For a small fee, their love is just a click, tap, or walk away.
 						</p>
 						<ul class="tech-stack">
-							<li>HTML5</li>
-							<li>Bootstrap</li>
-							<li>Responsive</li>
+							<li class="tech">HTML5</li>
+							<li class="tech">Bootstrap</li>
+							<li class="tech">Responsive</li>
 						</ul>
 						<div class="card-footer">
 							<a href="https://github.com/nrhoudek/tindog" target="_blank" class="card-link">Github</a>
@@ -212,20 +238,24 @@
 				</div>
 				<div class="card">
 					<div class="img-cont">
-						<img src="./assets/leg-counter-screen.png" alt="Front page of Dota 2 Leg Counter App.">
+						<picture>
+							<source media="(min-width: 1024px)" srcset="./assets/leg-counter-screen-lg.png" width="370" height="185">
+							<source media="(min-width: 640px)" srcset="./assets/leg-counter-screen-md.png" width="482" height="241">
+							<img src="./assets/leg-counter-screen-sm.png" alt="Front page of Dota 2 Leg Counter App display how many legs the hero Arc Warden has - 2." width="609" height="305">
+						</picture>
 					</div>
 					<div class="content-section">
 						<h3 class="card-title">
 							Dota 2 Leg Counter
 						</h3>
 						<p class="card-description">
-							This small app utilizes the Dota API from Valve to the user how many legs a certain hero within the game has. It may seem a little silly, but the idea for this site came during a game-event where you had to win a game as a hero with X amount of legs. Some of the results are actually surprising. Try: <em class="dota-hero">Axe</em>, <em class="dota-hero">Techies</em>, or <em class="dota-hero">Lifestealer</em>
+							This small app utilizes the Dota API from Valve to the user how many legs a certain hero within the game has. It may seem a little silly, but the idea for this site came during a game-event where you had to win a game as a hero with X amount of legs. Some of the results are actually surprising. Try: <em class="dota-hero">Axe</em>, <em class="dota-hero">Techies</em>, or <em class="dota-hero">Lifestealer</em>.
 						</p>
 						<ul class="tech-stack">
-							<li>HTML5</li>
-							<li>CSS3</li>
-							<li>JS/ES6</li>
-							<li>Responsive</li>
+							<li class="tech">HTML5</li>
+							<li class="tech">CSS3</li>
+							<li class="tech">JS/ES6</li>
+							<li class="tech">Responsive</li>
 						</ul>
 						<div class="card-footer">
 							<a href="https://github.com/nrhoudek/Dota2-Leg-Counter" target="_blank" class="card-link">Github</a>
@@ -239,13 +269,17 @@
 
 	<footer id="footer" class="footer">
 		<ul class="socials">
-			<li><i class="fa-brands fa-github"></i></li>
-			<li><i class="fa-brands fa-linkedin"></i></li>
-			<li><i class="fa-brands fa-twitter"></i></li>
+			<li><a href="https://github.com/nrhoudek" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/nhoudek/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+			<li><a href="https://twitter.com/NHoudek" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
 		</ul>
 		<div class="copyright">
 			<p class="date"></p>
 		</div>
 	</footer>
+
+	<button class="back-to-top">
+		<i class="fa-solid fa-angles-up"></i>
+	</button>
 </body>
 </html>
