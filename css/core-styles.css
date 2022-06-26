@@ -24,7 +24,13 @@ html {
 body {
 	min-height: 100vh;
 	position: relative;
-	padding-bottom: 88px;
+	padding-bottom: 120px;
+}
+
+@media (min-width: 64em) {
+	body {
+		padding-bottom: 135px;
+	}
 }
 
 main {
@@ -75,7 +81,7 @@ a {
 	font-weight: 700;
 	color: var(--dark-red);
 	text-decoration: none;
-	transition: color ease-in-out 400ms;
+	transition: color ease-in-out 300ms;
 }
 
 a:hover {
