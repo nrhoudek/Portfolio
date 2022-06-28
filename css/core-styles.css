@@ -10,7 +10,7 @@
 	-ms-touch-action: manipulation;
 	touch-action: manipulation;
 	outline: 2px solid var(--gray);
-	outline-offset: 2px;
+	outline-offset: 4px;
 }
 
 html {
