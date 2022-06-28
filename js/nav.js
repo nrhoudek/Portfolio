@@ -8,30 +8,33 @@
 
 	function toggleNav(e) {
 		mobileNav.classList.toggle('active');
+		hamburgerButton.classList.toggle('active');
 
 		//Accessibility measure for screen readers / keyboards
 		if (mobileNav.classList.contains('active')) {
 			links.forEach(link => link.tabIndex = '0');
 			mobileNav.ariaHidden = 'false';
+			mobileNav.ariaExpanded = 'true';
 			mobileMenu.forEach(item => item.addEventListener('keydown', mobileTabNavigation));
 		} else {
 			links.forEach(link => link.tabIndex = '-1');
 			mobileNav.ariaHidden = 'true';
+			mobileNav.ariaExpanded = 'false';
 			mobileMenu.forEach(item => item.removeEventListener('keydown', mobileTabNavigation));
 		}
-
-		hamburgerButton.classList.toggle('active');
 	}
 
 	function mobileTabNavigation(e) {
-		if(e.keyCode === 9 && e.target === mobileMenu[mobileMenu.length - 1]) {
-			console.log(e.target);
-			console.log(mobileMenu[0]);
-			mobileMenu[0].focus();
-		} else if((e.shiftKey === true && e.keyCode === 9) && e.target === mobileMenu[0]) {
-			console.log(e.target);
-			console.log(mobileMenu[mobileMenu.length - 1]);
-			mobileMenu[mobileMenu.length - 1].focus();
+		let first = 0;
+		let last = mobileMenu.length - 1;
+		let shiftDown = e.shiftKey;
+
+		if((!shiftDown && e.keyCode === 9) && e.target === mobileMenu[last]) {
+			e.preventDefault();
+			mobileMenu[first].focus();
+		} else if((shiftDown && e.keyCode === 9) && e.target === mobileMenu[first]) {
+			e.preventDefault();
+			mobileMenu[last].focus();
 		}
 	} 
 

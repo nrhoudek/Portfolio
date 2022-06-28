@@ -38,11 +38,11 @@
 <body>
 	<header id="header" class="header">
 		<div class="mobile-nav-cont">
-			<button class="hamburger-button" tabindex="0">
+			<button class="hamburger-button" tabindex="0" aria-label="Menu">
 				<i class="fa-solid fa-bars closed"></i>
 				<i class="fa-solid fa-x opened"></i>
 			</button>
-			<nav class="main-nav mobile" aria-hidden="true" tabindex="-1" role="navigation">
+			<nav class="main-nav mobile" role="navigation" tabindex="-1" aria-hidden="true" aria-expanded="false">
 				<ul class="nav-list">
 					<li class="nav-item"><a href="#about-me" tabindex="-1">About</a></li>
 					<li class="nav-item"><a href="#experience-education" tabindex="-1">Experience & Education</a></li>
@@ -67,6 +67,11 @@
 			<div class="hero-inner">
 				<h1 class="greeting">Hello!</h1>
 				<p class="sub-greeting">My Name is Nick and I'm a Web Developer.</p>
+				<ul class="socials">
+					<li><a href="https://github.com/nrhoudek" target="_blank" aria-label="Github Link"><i class="fa-brands fa-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/nhoudek/" target="_blank" aria-label="LinkedIn Link"><i class="fa-brands fa-linkedin"></i></a></li>
+					<li><a href="https://twitter.com/NHoudek" target="_blank" aria-label="Twitter Link"><i class="fa-brands fa-twitter"></i></a></li>
+				</ul>
 			</div>
 		</section>
 	</header>
@@ -76,7 +81,7 @@
 		<section id="about-me" class="about-me">
 			<h2 class="section-title">About Me</h2>
 			<p>
-				My Name is Nick Houdek and I am a Web Developer who tends to focus on the pretty side of developement. I currently work for a company called <a href='https://www.simpleviewinc.com/' target='_blank'>Simpleview</a> as a Frontend Web Developer, where I collaborate with Destination Marketing Organizations (<abbr>DMOs</abbr>) to create captivating and functional websites with the goal to attract tourism and travel for their own city and government. I began my journey into Web Development in 2020 and since then I have I done everything I can to learn, grow, and take pride in watching my code become something beautiful and accesible for all audiences. Cheers!
+				My Name is Nick Houdek and I am a Web Developer who likes to focus on the "pretty" side of developement. I currently work for a company called <a href='https://www.simpleviewinc.com/' target='_blank'>Simpleview</a> as a Frontend Web Developer, where I collaborate with Destination Marketing Organizations (<abbr>DMOs</abbr>) to create captivating and functional websites with the goal to attract tourism and travel for their own city and government. I began my journey into Web Development in 2020 and since then I have I done everything I can to learn, grow, and take pride in watching my code become something beautiful and accesible for all audiences. Cheers!
 			</p>
 		</section>
 
@@ -89,7 +94,7 @@
 				<button class="tab" data-tab-name="unrelated">Unrelated Work</button>
 			</div>
 			<div class="experience-container">
-				<div class="experience show" data-experience="related">
+				<div class="experience show" data-experience="related" aria-hidden="false">
 					<div class="content">
 						<h3 class="content-title">Simpleview</h3>
 						<h4 class="content-subtitle">Frontend Web Developer</h4>
@@ -135,17 +140,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="experience" data-experience="education">
+				<div class="experience" data-experience="education" aria-hidden="true">
 					<div class="content">
 						<h3 class="content-title">Univeristy of Arizona</h3>
-						<h4 class="content-subtitle">Bachelors of Science - 2019</h4>
+						<h4 class="content-subtitle">Bachelors of Science</h4>
 						<div class="content-description-container">
 							<p class="content-description">
 							I dual-majored in Criminal Justice and Public Policy & Management. I graduated Summa Cum Laude (4.0GPA out of 4.0GPA).
 							</p>
 						</div>
 						<h3 class="content-title">Pima Community College</h3>
-						<h4 class="content-subtitle">Associates of Science - 2017</h4>
+						<h4 class="content-subtitle">Associates of Science</h4>
 						<div class="content-description-container">
 							<p class="content-description">
 								I graduated with an Associates of Science with a concentration in Computer Science. During my time at Pima Community College I was inducted as a member of the prestigious Phi Theta Kappa organization.
@@ -153,7 +158,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="experience" data-experience="unrelated">
+				<div class="experience" data-experience="unrelated" aria-hidden="true">
 					<div class="content">
 						<h3 class="content-title">United States Border Patrol</h3>
 						<h4 class="content-subtitle">Border Patrol Agent</h4>
@@ -173,7 +178,7 @@
 					<h3 class="content-title">United States Customs and Border Protection</h3>
 					<h4 class="content-subtitle">Student Intern</h4>
 					<div class="content-description-container">
-						<p class="content-desciption">
+						<p class="content-description">
 							As a Student Intern for the United States Customs and Border Protection, I was responsible for physical and digital file management. I would complete the annual cateloguing and recording of over 1,200 items distributed throughout my area of responsiblity, and upheld strict securty procedures to maintain data confidentiality.
 						</p>
 					</div>
@@ -271,16 +276,16 @@
 
 	<footer id="footer" class="footer">
 		<ul class="socials">
-			<li><a href="https://github.com/nrhoudek" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-			<li><a href="https://www.linkedin.com/in/nhoudek/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-			<li><a href="https://twitter.com/NHoudek" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+			<li><a href="https://github.com/nrhoudek" target="_blank" aria-label="Github Link"><i class="fa-brands fa-github"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/nhoudek/" target="_blank" aria-label="LinkedIn Link"><i class="fa-brands fa-linkedin"></i></a></li>
+			<li><a href="https://twitter.com/NHoudek" target="_blank" aria-label="Twitter Link"><i class="fa-brands fa-twitter"></i></a></li>
 		</ul>
 		<div class="copyright">
 			<p class="date"></p>
 		</div>
 	</footer>
 
-	<button class="back-to-top">
+	<button class="back-to-top" aria-label="Back to Top">
 		<i class="fa-solid fa-angles-up"></i>
 	</button>
 </body>
