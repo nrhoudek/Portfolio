@@ -4,7 +4,6 @@
 	const mobileNav = document.querySelector('.main-nav.mobile');
 	const links = document.querySelectorAll('.main-nav.mobile .nav-item a');
 	const mobileMenu = [hamburgerButton, ...links];
-	console.log(mobileMenu);
 
 	function toggleNav(e) {
 		mobileNav.classList.toggle('active');
