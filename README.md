@@ -17,3 +17,8 @@ This site was developed to be fast, responive, and accessible. All HTML semantic
 4. [Github](https://github.com/nrhoudek)
 5. [LinkedIn](https://www.linkedin.com/in/nhoudek/)
 6. [Twitter](https://twitter.com/NHoudek)
+
+### What You Can Do
+If you like what you see, then please feel free to hit me up on LinkedIn, Twitter, or email me nickhoudek@gmail.com. Should you find something that can be improved on this site/portfolio, then feel free to also message me at one of the aforementioned methods or create an issue on this repository. I am always looking for feedback, constructive criticism, or friendly banter on just about anything.
+
+### Thanks for Viewing!
